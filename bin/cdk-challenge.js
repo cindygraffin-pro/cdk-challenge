@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-const cdk = require('aws-cdk-lib');
-const { CdkChallengeStack } = require('../lib/cdk-challenge-stack');
+import {App} from 'aws-cdk-lib';
+import { CdkChallengeStack } from '../lib/cdk-challenge-stack.js';
 
-const app = new cdk.App();
+
+
+const app = new App();
 new CdkChallengeStack(app, 'CdkChallengeStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
